@@ -6,8 +6,6 @@
 <title>Équipage de Melmel - Mes Réseaux et Projets</title>
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/melmel311/icon-/refs/heads/main/d516cd44-439a-4abe-b606-5e625f7a0afb.png" />
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto&display=swap');
-
   body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -16,43 +14,53 @@
     min-height: 100vh;
   }
 
-  header {
-    background: 
-      linear-gradient(rgba(43, 26, 15, 0.75), rgba(43, 26, 15, 0.75)),
-      url('https://raw.githubusercontent.com/melmel311/image0/99d63cb3054bad9fbd00d0e84545c7422cfbf84e/ChatGPT%20Image%208%20juil.%202025%2C%2000_43_45.png?token=BEDUJMO7VBNUIU7A5YQWH4LINRHDW') no-repeat center/cover;
-    padding: 100px 20px;
+  /* ----- HEADER AVEC GIF ----- */
+  .video-header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: url('https://i.redd.it/one-piece-episode-1062-gifs-v0-zz229y8pmw8b1.gif?width=600&auto=webp&s=4d9e874aae610b4f3eb963b6cbeb28260814facb') center/cover no-repeat;
+  }
+  .header-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    box-shadow: inset 0 0 50px #0008;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
     font-family: 'Pirata One', cursive;
   }
-  header h1 {
-    font-size: 4rem;
-    color: #f3c677;
-    margin: 0 0 15px;
-    text-shadow: 2px 2px 5px #0009;
+  .header-logo {
+    height: 120px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0008;
+    margin-bottom: 20px;
   }
-  header p {
+  .header-content h1 {
+    font-size: 4rem;
+    margin: 0 0 15px;
+    color: #f3c677;
+  }
+  .header-content p {
     font-size: 1.5rem;
     color: #e9d4a3;
-    text-shadow: 1px 1px 4px #0008;
   }
 
+  /* ----- NAVIGATION ----- */
   nav {
     background: #3c280a;
-    padding: 10px 20px;
+    padding: 15px 0;
+    text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px #0008;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
   }
   nav a {
     color: #f3c677;
     text-decoration: none;
+    margin: 0 20px;
     font-weight: 700;
     font-family: 'Pirata One', cursive;
     font-size: 1.2rem;
@@ -62,24 +70,13 @@
     color: #f9e4b7;
     text-shadow: 0 0 8px #f3c677;
   }
-  nav .logo img {
-    height: 40px;
-    width: auto;
-    vertical-align: middle;
-    border-radius: 8px;
-    box-shadow: 0 0 5px #0008;
-    transition: transform 0.2s ease;
-  }
-  nav .logo img:hover {
-    transform: scale(1.05);
-  }
 
+  /* ----- SECTIONS ----- */
   section {
     padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
   }
-
   h2 {
     font-family: 'Pirata One', cursive;
     font-size: 3.5rem;
@@ -88,7 +85,6 @@
     margin-bottom: 50px;
     text-shadow: 2px 2px 6px #000c;
   }
-
   p {
     max-width: 900px;
     margin: auto;
@@ -98,6 +94,7 @@
     text-align: center;
   }
 
+  /* ----- PROJETS ----- */
   .projets-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -114,7 +111,6 @@
     text-decoration: none;
     color: #f9e4b7;
     font-weight: 600;
-    font-family: 'Roboto', sans-serif;
   }
   .projet:hover {
     transform: translateY(-8px);
@@ -132,6 +128,7 @@
     color: #f0e6d2;
   }
 
+  /* ----- CONTACT ----- */
   #contact p a {
     color: #f3c677;
     text-decoration: none;
@@ -143,6 +140,7 @@
     text-shadow: 0 0 8px #f3c677;
   }
 
+  /* ----- FOOTER ----- */
   footer {
     background: #3c280a;
     color: #a88e5a;
@@ -154,26 +152,30 @@
   }
 </style>
 </head>
-<body id="top">
-  <header>
-    <h1>Équipage de Melmel</h1>
-    <p>Streamer, créateur de contenu & développeur indépendant</p>
+<body>
+
+  <!-- Header avec GIF -->
+  <header class="video-header">
+    <div class="header-content">
+      <img class="header-logo" src="https://raw.githubusercontent.com/melmel311/icon-/refs/heads/main/d516cd44-439a-4abe-b606-5e625f7a0afb.png" alt="Logo Équipage de Melmel">
+      <h1>Équipage de Melmel</h1>
+      <p>Streamer, créateur de contenu & développeur indépendant</p>
+    </div>
   </header>
 
+  <!-- Barre de navigation -->
   <nav>
-    <a href="#top" class="logo">
-      <img src="https://raw.githubusercontent.com/melmel311/icon-/refs/heads/main/d516cd44-439a-4abe-b606-5e625f7a0afb.png" alt="Logo Équipage de Melmel" />
-    </a>
     <a href="#a-propos">À propos</a>
     <a href="#projets">Projets</a>
     <a href="#collaborateurs">Collaborateurs</a>
     <a href="#contact">Discord & Réseaux</a>
   </nav>
 
+  <!-- Sections -->
   <section id="a-propos">
     <h2>À propos</h2>
     <p>
-      Passionné par le streaming, la création de jeux vidéo et les aventures numériques, je construis un univers où l'imagination est reine. À bord de mon navire virtuel, chaque projet est une escale vers de nouvelles découvertes. Cette page est dédiée à partager mes créations, valoriser l'entraide, et rendre hommage aux compagnons qui embarquent à mes côtés dans cette grande aventure digitale. Bienvenue dans l’équipage de Melmel, où chaque membre compte, chaque idée navigue, et chaque ligne de code trace notre route !
+      Passionné par le streaming, la création de jeux vidéo et les aventures numériques, je construis un univers où l'imagination est reine. À bord de mon navire virtuel, chaque projet est une escale vers de nouvelles découvertes. Bienvenue dans l’équipage de Melmel, où chaque membre compte, chaque idée navigue, et chaque ligne de code trace notre route !
     </p>
   </section>
 
@@ -182,15 +184,15 @@
     <div class="projets-container">
       <a class="projet" href="https://exemple.com/jeu2d" target="_blank" rel="noopener noreferrer">
         <h3>🎮 Jeu 2D</h3>
-        <p>Un jeu de plateforme rétro réalisé avec Unity. J'y ai appris la physique 2D et le scripting en C#.</p>
+        <p>Un jeu de plateforme rétro réalisé avec Unity.</p>
       </a>
       <a class="projet" href="https://discord.gg/MrAfhrqEHS" target="_blank" rel="noopener noreferrer">
         <h3>💬 Discord de l’équipage</h3>
-        <p>Retrouvez ici le Discord des collaborateurs et amis qui m'ont aidé dans mes projets.</p>
+        <p>Le Discord des collaborateurs et amis.</p>
       </a>
       <a class="projet" href="#collaborateurs">
         <h3>🤝 Développeurs collaborateurs</h3>
-        <p>Les profils et compétences des membres de l’équipage qui m’accompagnent dans mes aventures.</p>
+        <p>Les profils des membres de l’équipage.</p>
       </a>
     </div>
   </section>
@@ -201,25 +203,17 @@
       <div class="projet">
         <h3>⚙️ SR_OFF</h3>
         <p>Développeur Unity & C#</p>
-        <p>
-          🔗 <a href="https://twitch.tv/SROff23712" target="_blank">Twitch</a> | 
-          <a href="https://github.com/SROff23712" target="_blank">GitHub</a>
-        </p>
+        <p>🔗 <a href="https://twitch.tv/SROff23712" target="_blank">Twitch</a> | <a href="https://github.com/SROff23712" target="_blank">GitHub</a></p>
       </div>
       <div class="projet">
         <h3>🎨 ASH</h3>
         <p>Développeur Roblox</p>
-        <p>
-          🔗 <a href="https://www.roblox.com/fr/users/3485767091/profile" target="_blank">Roblox</a> | 
-          <a href="https://discord.gg/AUxSJmJM9M" target="_blank">Discord</a>
-        </p>
+        <p>🔗 <a href="https://www.roblox.com/fr/users/3485767091/profile" target="_blank">Roblox</a> | <a href="https://discord.gg/AUxSJmJM9M" target="_blank">Discord</a></p>
       </div>
       <div class="projet">
         <h3>🔊 Extrait_lent</h3>
         <p>Business & OFM</p>
-        <p>
-          🔗 <a href="https://www.youtube.com/@Extrait_lent" target="_blank">YouTube</a>
-        </p>
+        <p>🔗 <a href="https://www.youtube.com/@Extrait_lent" target="_blank">YouTube</a></p>
       </div>
     </div>
   </section>
@@ -227,16 +221,18 @@
   <section id="contact">
     <h2>Discord & Réseaux</h2>
     <p>
-      ⚓ Discord : <a href="https://discord.gg/MrAfhrqEHS" target="_blank" rel="noopener noreferrer">@MelmelEquipage</a><br />
-      📺 Twitch : <a href="https://twitch.tv/melmel_offzz" target="_blank" rel="noopener noreferrer">@melmel_offzz</a><br />
-      🎥 YouTube : <a href="https://youtube.com/@melmel_off" target="_blank" rel="noopener noreferrer">@melmel_off</a><br />
-      🐦 Twitter : <a href="https://twitter.com/melmel_offzz" target="_blank" rel="noopener noreferrer">@melmel_offzz</a><br />
-      📧 Email : <a href="mailto:tonmail@melmel.offzz">melmel.offzz@gmail.com</a>
+      ⚓ Discord : <a href="https://discord.gg/MrAfhrqEHS" target="_blank">@MelmelEquipage</a><br />
+      📺 Twitch : <a href="https://twitch.tv/melmel_offzz" target="_blank">@melmel_offzz</a><br />
+      🎥 YouTube : <a href="https://youtube.com/@melmel_off" target="_blank">@melmel_off</a><br />
+      🐦 Twitter : <a href="https://twitter.com/melmel_offzz" target="_blank">@melmel_offzz</a><br />
+      📧 Email : <a href="mailto:melmel.offzz@gmail.com">melmel.offzz@gmail.com</a>
     </p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Équipage de Melmel — Tous droits réservés.</p>
   </footer>
+
 </body>
 </html>
